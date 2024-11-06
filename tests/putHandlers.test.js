@@ -38,7 +38,7 @@ test('should create a kit, update the order with PUT check response status and b
 		actualPutResponseBody = await putResponse.json();
 
         // Step 3: Delete the kit after test completion
-        const deleteResponse = await fetch(`${config.API_URL}/api/v1/kits/${kitId}`, {
+        await fetch(`${config.API_URL}/api/v1/kits/${kitId}`, {
             method: 'DELETE'
         });
 

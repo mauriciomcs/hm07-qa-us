@@ -22,7 +22,7 @@ test('should create a kit, Check response status and body, and then delete the k
         kitId = actualPostResponseBody.id; 
 
         // Step 2: Delete the kit after test completion
-        const deleteResponse = await fetch(`${config.API_URL}/api/v1/kits/${kitId}`, {
+        await fetch(`${config.API_URL}/api/v1/kits/${kitId}`, {
             method: 'DELETE'
         });
 
